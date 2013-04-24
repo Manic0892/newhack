@@ -17,6 +17,38 @@ $(document).ready(function() {
 		draggable: true,
 		fill: 'white'
 	});
+	var leftup = new Kinetic.Rect({
+		width:5,
+		height:5,
+		x:0,
+		y:0,
+		fill: 'white'
+	});
+	var leftdown = new Kinetic.Rect({
+		width:5,
+		height:5,
+		x:0,
+		y:stage.getHeight()-5,
+		fill: 'white'
+	});
+	var rightup = new Kinetic.Rect({
+		width:5,
+		height:5,
+		x:stage.getWidth()-5,
+		y:0,
+		fill: 'white'
+	});
+	var rightdown = new Kinetic.Rect({
+		width:5,
+		height:5,
+		x:stage.getWidth()-5,
+		y:stage.getHeight()-5,
+		fill: 'white'
+	});
+	mainLayer.add(leftup);
+	mainLayer.add(leftdown);
+	mainLayer.add(rightup);
+	mainLayer.add(rightdown);
 	mainLayer.add(newRect);
 	mainLayer.draw();
 });
