@@ -9,6 +9,15 @@ $(document).ready(function() {
 	});
 	mainLayer = new Kinetic.Layer();
 	stage.add(mainLayer);
+	drawMainStage();
+});
+
+$(window).resize(function() {console.log('drawing');drawMainStage();});
+
+function drawMainStage() {
+	stage.setHeight(window.innerHeight);
+	stage.setWidth(window.innerWidth);
+	mainLayer.removeChildren();
 	var newRect = new Kinetic.Rect({
 		width: 200,
 		height:200,
@@ -50,5 +59,5 @@ $(document).ready(function() {
 	mainLayer.add(rightup);
 	mainLayer.add(rightdown);
 	mainLayer.add(newRect);
-	mainLayer.draw();
-});
+	stage.draw();
+}
