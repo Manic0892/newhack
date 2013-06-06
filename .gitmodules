@@ -1,0 +1,3 @@
+[submodule "util/nd"]
+	path = util/nd
+	url = git@github.com:lgp/NaturalDocs.git
